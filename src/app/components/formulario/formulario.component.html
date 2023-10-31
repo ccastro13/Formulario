@@ -1,0 +1,48 @@
+
+<h1>Productos</h1>
+<br>
+<label for="">Ingrese id</label>
+<br>
+<input type="text" [(ngModel)]="id" >
+<br>
+<label for="">Ingrese nombre</label>
+<br>
+<input type="text" [(ngModel)]="nombre">
+<br>
+<label for="">Ingrese precio</label>
+<br>
+<input type="text" [(ngModel)]="precio">
+<br>
+<label for="">Ingrese cantidad</label>
+<br>
+<input type="text" [(ngModel)]="cantidad">
+
+<br>
+<br>
+
+<button (click)="agregarProducto()">Agregar</button>
+
+<table id="tabla">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            
+            </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor = "let producto of productos; let i = index" >
+            <td>{{producto.id}}</td>
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.precio}}</td>
+            <td>{{producto.cantidad}}</td>
+            <td><button (click)="eliminarProducto(i)">Eliminar</button></td>
+        </tr>
+    </tbody>
+</table>
+
+
+

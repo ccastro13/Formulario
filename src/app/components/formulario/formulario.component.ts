@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Producto } from 'src/app/data/producto.model';
 
+
+
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
